@@ -38,7 +38,7 @@ $ php -S localhost:8000
 ### หมายเหตุ
 ห้ามแก้ไขโค้ดเดิม (ยกเว้น /index.php)
 แต่คุณสามารถเพิ่มฟังก์ชันใหม่ หรือ class ใหม่ได้ตามความต้องการ
-(ใน index.php ต้องเรียกใช้งานผ่าน [App\Service\ProductService](App\Service\ProductService) เท่านั้น)
+(ใน index.php ต้องเรียกใช้งานผ่าน [App\Service\ProductService](src/Service/ProductService.php) เท่านั้น)
 
 
 ### ส่งงาน
