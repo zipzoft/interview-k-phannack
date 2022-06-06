@@ -1,4 +1,4 @@
-# Interview K'Tatpong
+# Interview K'Phannack
 
 ### System Requirements
 ```json
@@ -9,6 +9,7 @@
 
 ### System Setup
 ```bash
+# Setup dependencies
 $ composer install
 ```
 
@@ -16,11 +17,11 @@ $ composer install
 ```bash
 $ php -S localhost:8000
 
-# Open your browser and go to http://localhost:8000/
+# Open your browser and go to http://localhost:8000
 # You should see the product list at index.php
 ```
 
-### Your Task
+### Your Quest
 เราต้องการเปลี่ยนการอ่านข้อมูลรายการสินค้าใหม่
 (ปัจจุบันเราใช้การอ่านข้อมูลจาก array ที่มีข้อมูลสินค้าทั้งหมด)
 
@@ -36,9 +37,12 @@ $ php -S localhost:8000
 
 
 ### หมายเหตุ
-ห้ามแก้ไขโค้ดเดิม (ยกเว้น /index.php)
+ห้ามแก้ไขโค้ดเดิม ยกเว้น
+* [/index.php](index.php)
+* [/src/Service/ProductService.php](/src/Service/ProductService.php)
+
 แต่คุณสามารถเพิ่มฟังก์ชันใหม่ หรือ class ใหม่ได้ตามความต้องการ
-(ใน index.php ต้องเรียกใช้งานผ่าน [App\Service\ProductService](src/Service/ProductService.php) เท่านั้น)
+ซึ่งใน index.php ต้องเรียกใช้งานผ่าน [App\Service\ProductService](src/Service/ProductService.php) เท่านั้น
 
 
 ### ส่งงาน

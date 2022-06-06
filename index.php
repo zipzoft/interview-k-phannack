@@ -3,19 +3,9 @@
 require_once __DIR__ . '/bootstrap.php';
 
 use App\Service\ProductService;
-use App\Repository\InMemoryProductRepository;
-use App\Repository\CacheJsonRepository;
-use App\ProductRepositoryCacheAdapter;
-
-// Create product repository
-$repository = new ProductRepositoryCacheAdapter(
-    new InMemoryProductRepository(),
-    new CacheJsonRepository(),
-    'products',
-);
 
 // Create a new product service
-$service = new ProductService($repository);
+$service = new ProductService();
 ?>
 
 <!DOCTYPE html>

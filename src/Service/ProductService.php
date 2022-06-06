@@ -3,6 +3,9 @@
 namespace App\Service;
 
 use App\Repository\ProductRepository;
+use App\Repository\CacheJsonRepository;
+use App\Repository\InMemoryProductRepository;
+use App\ProductRepositoryCacheAdapter;
 
 class ProductService
 {
@@ -15,9 +18,13 @@ class ProductService
     /**
      * @param ProductRepository $repository
      */
-    public function __construct(ProductRepository $repository)
+    public function __construct()
     {
-        $this->repository = $repository;
+        $this->repository = new ProductRepositoryCacheAdapter(
+            new InMemoryProductRepository(),
+            new CacheJsonRepository(),
+            'products',
+        );
     }
 
     /**
